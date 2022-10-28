@@ -9,7 +9,7 @@ app.use(cors({
     .get('/', (req, res) => {
 
         res.send({
-            slackUsername: 'thefemiolatubosun',
+            slackUsername: 'the-ace',
             backend: true, age: 24,
             bio: "I'm Femi. And I am excited to be a part of the internship!"
         })
