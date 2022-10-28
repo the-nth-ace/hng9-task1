@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const port = 3000
+const port = process.env.port || 3000
 
 app.use(cors({
     origin: '*'
@@ -9,7 +9,9 @@ app.use(cors({
     .get('/', (req, res) => {
 
         res.send({
-            slackUsername: 'thefemiolatubosun', backend: true, age: 24, bio: "I'm Femi. And I am excited to be a part of the internship!"
+            slackUsername: 'thefemiolatubosun',
+            backend: true, age: 24,
+            bio: "I'm Femi. And I am excited to be a part of the internship!"
         })
     }).listen(port, () => {
         console.clear()
